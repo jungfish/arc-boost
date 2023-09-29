@@ -11,20 +11,21 @@ async function onButtonClick() {
   for(var i=0; i<inputs.length;i++) {
   inputs[i].click();
   await sleep(getRandomArbitrary(100,500))}
-  alert('Feed Post liked!');
+  alert(inputs.length + ' Feed Posts liked !');
 }
 
 async function LoadButton() {
 
-await sleep(1000);  
-const newButton = document.createElement('button');
-newButton.textContent = 'Like Feed !';
-newButton.id = "boostArcButton"
-document.body.appendChild(newButton);
-console.log("pouet")
+if (document.URL.indexOf("feed") > 0) {
+  await sleep(1000);  
+  const newButton = document.createElement('button');
+  newButton.textContent = 'Like Feed !';
+  newButton.id = "boostArcButton"
+  document.body.appendChild(newButton);
 
-const button = document.querySelector("#boostArcButton")
-button.addEventListener('click', onButtonClick);
+  const button = document.querySelector("#boostArcButton")
+  button.addEventListener('click', onButtonClick);
+  }
 }
 
 LoadButton();
