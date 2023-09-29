@@ -10,7 +10,7 @@ async function onButtonClick() {
   var inputs = document.querySelectorAll('.react-button__trigger') ;
   for(var i=0; i<inputs.length;i++) {
   inputs[i].click();
-  await sleep(getRandomArbitrary(100,500))}
+  await sleep(getRandomArbitrary(300,1500))}
   alert(inputs.length + ' Feed Posts liked !');
 }
 
